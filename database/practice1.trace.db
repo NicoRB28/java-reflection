@@ -1,0 +1,338 @@
+2021-12-05 01:42:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE TRANSACTIONHISTORY([*]"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE TRANSACTIONHISTORY([*]"; expected "identifier"; SQL statement:
+CREATE TABLE TransactionHistory( [42001-202]
+2021-12-05 01:54:03 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: /home/nico/Documentos/proyectos/untitled/database/practice1.mv.db [2.0.202/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: /home/nico/Documentos/proyectos/untitled/database/practice1.mv.db [2.0.202/7]" [50000-202]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:120)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3292)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:585)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:461)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4052)
+	at org.h2.mvstore.db.Store.<init>(Store.java:129)
+	at org.h2.engine.Database.<init>(Database.java:325)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:342)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:117)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at com.company.ORMexample.Hibernate.<init>(Hibernate.java:24)
+	at com.company.ORMexample.Hibernate.getConnection(Hibernate.java:28)
+	at com.company.ORMexample.Application.main(Application.java:13)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: /home/nico/Documentos/proyectos/untitled/database/practice1.mv.db [2.0.202/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: /home/nico/Documentos/proyectos/untitled/database/practice1.mv.db [2.0.202/7]" [50000-202]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: /home/nico/Documentos/proyectos/untitled/database/practice1.mv.db [2.0.202/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:163)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:444)
+	... 14 more
+2021-12-05 01:54:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Parametro "#3" no está fijado
+Parameter "#3" is not set; SQL statement:
+INSERT INTO TransactionHistory(transactionId,accountNumber,name,transactionType,amount)VALUES (?,?,?,?,?) [90012-202]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:181)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:163)
+	at org.h2.command.Command.executeUpdate(Command.java:247)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:209)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:169)
+	at com.company.ORMexample.Hibernate.write(Hibernate.java:71)
+	at com.company.ORMexample.Application.main(Application.java:15)
+2021-12-05 01:55:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Parametro "#3" no está fijado
+Parameter "#3" is not set; SQL statement:
+INSERT INTO TransactionHistory(transactionId,accountNumber,name,transactionType,amount)VALUES (?,?,?,?,?) [90012-202]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:181)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:163)
+	at org.h2.command.Command.executeUpdate(Command.java:247)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:209)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:169)
+	at com.company.ORMexample.Hibernate.write(Hibernate.java:71)
+	at com.company.ORMexample.Application.main(Application.java:15)
+2021-12-05 01:55:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Parametro "#3" no está fijado
+Parameter "#3" is not set; SQL statement:
+INSERT INTO TransactionHistory(transactionId,accountNumber,name,transactionType,amount)VALUES (?,?,?,?,?) [90012-202]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:181)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:163)
+	at org.h2.command.Command.executeUpdate(Command.java:247)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:209)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:169)
+	at com.company.ORMexample.Hibernate.write(Hibernate.java:72)
+	at com.company.ORMexample.Application.main(Application.java:15)
+2021-12-05 02:02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Parametro "#3" no está fijado
+Parameter "#3" is not set; SQL statement:
+INSERT INTO TransactionHistory(transactionId,accountNumber,name,transactionType,amount)VALUES (?,?,?,?,?) [90012-202]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:181)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:163)
+	at org.h2.command.Command.executeUpdate(Command.java:247)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:209)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:169)
+	at com.company.ORMexample.Hibernate.write(Hibernate.java:70)
+	at com.company.ORMexample.Application.main(Application.java:15)
+2021-12-05 02:03:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DELETE *[*] FROM TRANSACTIONHISTORY"; se esperaba "identifier"
+Syntax error in SQL statement "DELETE *[*] FROM TRANSACTIONHISTORY"; expected "identifier"; SQL statement:
+DELETE * from TransactionHistory [42001-202]
+2021-12-05 02:10:24 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: /home/nico/Documentos/proyectos/untitled/database/practice1.mv.db [2.0.202/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: /home/nico/Documentos/proyectos/untitled/database/practice1.mv.db [2.0.202/7]" [50000-202]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:120)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3292)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:585)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:461)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4052)
+	at org.h2.mvstore.db.Store.<init>(Store.java:129)
+	at org.h2.engine.Database.<init>(Database.java:325)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:342)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:117)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at com.company.ORMexample.Hibernate.<init>(Hibernate.java:22)
+	at com.company.ORMexample.Hibernate.getConnection(Hibernate.java:26)
+	at com.company.ORMexample.Application.main(Application.java:13)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: /home/nico/Documentos/proyectos/untitled/database/practice1.mv.db [2.0.202/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: /home/nico/Documentos/proyectos/untitled/database/practice1.mv.db [2.0.202/7]" [50000-202]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: /home/nico/Documentos/proyectos/untitled/database/practice1.mv.db [2.0.202/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:163)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:444)
+	... 14 more
+2021-12-05 02:22:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Parametro "#5" no está fijado
+Parameter "#5" is not set; SQL statement:
+INSERT INTO TransactionHistory(transactionId,accountNumber,name,transactionType,amount)VALUES (?,?,?,?,?) [90012-202]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:181)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:163)
+	at org.h2.command.Command.executeUpdate(Command.java:247)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:209)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:169)
+	at com.company.ORMexample.Hibernate.write(Hibernate.java:56)
+	at com.company.ORMexample.Application.main(Application.java:15)
+2021-12-05 02:32:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Nombre de columna Duplicada "TRANSACTIONID"
+Duplicate column name "TRANSACTIONID"; SQL statement:
+INSERT INTO TransactionHistory(transactionId,transactionId)VALUES (?,?,?,?,?) [42121-202]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1631)
+	at org.h2.command.Parser.parseInsert(Parser.java:1962)
+	at org.h2.command.Parser.parsePrepared(Parser.java:1191)
+	at org.h2.command.Parser.parse(Parser.java:1068)
+	at org.h2.command.Parser.parse(Parser.java:1037)
+	at org.h2.command.Parser.prepareCommand(Parser.java:965)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:614)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:552)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1111)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:283)
+	at com.company.ORMexample.Hibernate.makePreparedStatement(Hibernate.java:67)
+	at com.company.ORMexample.Hibernate.write(Hibernate.java:62)
+	at com.company.ORMexample.Application.main(Application.java:15)
+2021-12-05 02:35:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Parametro "#4" no está fijado
+Parameter "#4" is not set; SQL statement:
+INSERT INTO TransactionHistory(transactionId,accountNumber,name,transactionType,amount)VALUES (?,?,?,?,?) [90012-202]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:181)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:163)
+	at org.h2.command.Command.executeUpdate(Command.java:247)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:209)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:169)
+	at com.company.ORMexample.Hibernate.write(Hibernate.java:53)
+	at com.company.ORMexample.Application.main(Application.java:15)
+2021-12-05 02:35:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Parametro "#5" no está fijado
+Parameter "#5" is not set; SQL statement:
+INSERT INTO TransactionHistory(transactionId,accountNumber,name,transactionType,amount)VALUES (?,?,?,?,?) [90012-202]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:181)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:163)
+	at org.h2.command.Command.executeUpdate(Command.java:247)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:209)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:169)
+	at com.company.ORMexample.Hibernate.write(Hibernate.java:53)
+	at com.company.ORMexample.Application.main(Application.java:15)
+2021-12-05 02:36:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Parametro "#4" no está fijado
+Parameter "#4" is not set; SQL statement:
+INSERT INTO TransactionHistory(transactionId,accountNumber,name,transactionType,amount)VALUES (?,?,?,?,?) [90012-202]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:181)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:163)
+	at org.h2.command.Command.executeUpdate(Command.java:247)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:209)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:169)
+	at com.company.ORMexample.Hibernate.write(Hibernate.java:53)
+	at com.company.ORMexample.Application.main(Application.java:15)
+2021-12-05 02:37:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Parametro "#4" no está fijado
+Parameter "#4" is not set; SQL statement:
+INSERT INTO TransactionHistory(transactionId,accountNumber,name,transactionType,amount)VALUES (?,?,?,?,?) [90012-202]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:181)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:163)
+	at org.h2.command.Command.executeUpdate(Command.java:247)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:209)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:169)
+	at com.company.ORMexample.Hibernate.write(Hibernate.java:54)
+	at com.company.ORMexample.Application.main(Application.java:15)
+2021-12-05 02:38:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Parametro "#4" no está fijado
+Parameter "#4" is not set; SQL statement:
+INSERT INTO TransactionHistory(transactionId,accountNumber,name,transactionType,amount)VALUES (?,?,?,?,?) [90012-202]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:181)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:163)
+	at org.h2.command.Command.executeUpdate(Command.java:247)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:209)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:169)
+	at com.company.ORMexample.Hibernate.write(Hibernate.java:53)
+	at com.company.ORMexample.Application.main(Application.java:15)
+2021-12-05 02:39:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Parametro "#5" no está fijado
+Parameter "#5" is not set; SQL statement:
+INSERT INTO TransactionHistory(transactionId,accountNumber,name,transactionType,amount)VALUES (?,?,?,?,?) [90012-202]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:181)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:163)
+	at org.h2.command.Command.executeUpdate(Command.java:247)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:209)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:169)
+	at com.company.ORMexample.Hibernate.write(Hibernate.java:53)
+	at com.company.ORMexample.Application.main(Application.java:15)
+2021-12-06 09:50:04 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: /home/nico/Documentos/proyectos/untitled/database/practice1.mv.db [2.0.202/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: /home/nico/Documentos/proyectos/untitled/database/practice1.mv.db [2.0.202/7]" [50000-202]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:120)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3292)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:585)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:461)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4052)
+	at org.h2.mvstore.db.Store.<init>(Store.java:129)
+	at org.h2.engine.Database.<init>(Database.java:325)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:342)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:117)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at com.company.ORMexample.Hibernate.<init>(Hibernate.java:26)
+	at com.company.ORMexample.Hibernate.getConnection(Hibernate.java:30)
+	at com.company.ORMexample.Application.main(Application.java:13)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: /home/nico/Documentos/proyectos/untitled/database/practice1.mv.db [2.0.202/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: /home/nico/Documentos/proyectos/untitled/database/practice1.mv.db [2.0.202/7]" [50000-202]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: /home/nico/Documentos/proyectos/untitled/database/practice1.mv.db [2.0.202/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:163)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:444)
+	... 14 more
+2021-12-06 10:18:42 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: /home/nico/Documentos/proyectos/untitled/database/practice1.mv.db [2.0.202/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: /home/nico/Documentos/proyectos/untitled/database/practice1.mv.db [2.0.202/7]" [50000-202]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:120)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3292)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:585)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:461)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4052)
+	at org.h2.mvstore.db.Store.<init>(Store.java:129)
+	at org.h2.engine.Database.<init>(Database.java:325)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:342)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:117)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at com.company.ORMexample.Hibernate.<init>(Hibernate.java:24)
+	at com.company.ORMexample.Hibernate.getConnection(Hibernate.java:28)
+	at com.company.ORMexample.Application.main(Application.java:14)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: /home/nico/Documentos/proyectos/untitled/database/practice1.mv.db [2.0.202/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: /home/nico/Documentos/proyectos/untitled/database/practice1.mv.db [2.0.202/7]" [50000-202]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: /home/nico/Documentos/proyectos/untitled/database/practice1.mv.db [2.0.202/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:163)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:444)
+	... 14 more

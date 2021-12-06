@@ -1,0 +1,15 @@
+2021-12-05 01:46:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONHISTORY" not found (this database is empty); SQL statement:
+INSERT INTO TransactionHistory(transactionId,accountNumber,name,transactionType,amount)VALUES (?,?,?,?,?) [42104-202]
+2021-12-05 01:47:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONHISTORY" not found (this database is empty); SQL statement:
+INSERT INTO TransactionHistory(transactionId,accountNumber,name,transactionType,amount)VALUES (?,?,?,?,?) [42104-202]
+2021-12-05 01:51:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONHISTORY" not found (this database is empty); SQL statement:
+INSERT INTO TransactionHistory(transactionIdaccountNumber,name,transactionType,amount)VALUES (?,?,?,?,?) [42104-202]
+2021-12-05 01:52:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONHISTORY" not found (this database is empty); SQL statement:
+INSERT INTO TransactionHistory(transactionId,accountNumber,name,transactionType,amount)VALUES (?,?,?,?,?) [42104-202]
+2021-12-05 01:53:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONHISTORY" not found (this database is empty); SQL statement:
+INSERT INTO TRANSACTIONHISTORY(transactionId,accountNumber,name,transactionType,amount)VALUES (?,?,?,?,?) [42104-202]
