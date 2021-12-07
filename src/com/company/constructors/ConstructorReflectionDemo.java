@@ -4,7 +4,6 @@ import com.company.fields.Entity;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
-import java.util.Arrays;
 import java.util.stream.Stream;
 
 public class ConstructorReflectionDemo {
